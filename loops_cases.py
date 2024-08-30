@@ -17,7 +17,7 @@ for numbers in range(1,21):
 number = list(range(1,1000001))    
 print(number)
 
-print(min(number))
+print(min(number1))
 print(max(number))
 print(sum(number))
 
