@@ -46,3 +46,24 @@
 #     else:
 #         print(message)
 
+# prompt = "\nEnter the name of the city you have visited:"
+# prompt += "\n(Enter 'quit' when you are finished.)"
+# while True:
+#     city = input(prompt)
+#     if city == 'quit':
+#         break
+#     else:
+#         print("I'd love to go to "+ city.title()+"!")
+
+# current_num = 0
+# while current_num < 10:
+#     current_num += 1
+#     if current_num % 2 == 0:
+#         continue
+#     print(current_num)
+
+x = 1
+while x <= 5:
+    print(x)
+    x += 1
+
