@@ -65,5 +65,33 @@
 x = 1
 while x <= 5:
     print(x)
-    x += 1
+    x +=1
 
+unconfirmed = ['alice' , 'reah' , 'sam']
+confirmed = []
+while unconfirmed:
+    current = unconfirmed.pop()
+    print("Verifying user: " + current.title())
+    confirmed.append(current)
+print("\nThe following users have been confirmed:")
+for confirm in confirmed:
+    print(confirm.title())
+
+pets = ['dog' , 'cat' , 'dog' , 'goldfish' , 'cat' , 'rabbit' , 'cat']
+print(pets)
+while 'cat' in pets:
+    pets.remove('cat')
+print(pets)
+
+responses = {}
+polling_active = True
+while polling_active:
+    name = input("\nWhat is your name? ")
+    response = input("Which mountain would you like to climb someday? ")
+    responses[name] = response
+    repeat = input("Would you like to let another person respond? (yes/no) ")
+    if repeat == 'no':
+        polling_active = False
+print("\n---Poll Results---")
+for name, response in responses.items():
+    print(name + " would like to climb " + response + ".")
