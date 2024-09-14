@@ -29,3 +29,69 @@ def describe_city(name , country = 'india'):
 describe_city('bangalore')
 describe_city('gurugram')
 describe_city('bastille' , 'paris')
+
+def city_country(name , country):
+    """Return a city name and it's country."""
+    country_city =  name + ", " + country
+    return country_city.title()
+cities = city_country('bangalore' , 'india')
+print(cities)
+cities = city_country('noida' , 'india')
+print(cities)
+cities = city_country('karachi' , 'pakistan')
+print(cities)
+
+def make_album(name , title , tracks=''):
+    """Builds a dictionary with artist's name and title."""
+    album = {'names':name , 'titles':title}
+    if tracks:
+        album['tracks'] = tracks
+    return album
+artist = make_album('ruskin bond' , 'beehive')
+print(artist)
+artist = make_album('harry potter' , 'harry potter series')
+print(artist)
+artist = make_album('premchand' , 'bal bharti')
+print(artist)
+artist = make_album('love' , 'henry' , tracks=3)
+print(artist)
+
+def make_album(name , title):
+    """Builds a dictionary with artist's name and title."""
+    album = {'names':name , 'titles':title}
+    return album
+while True:
+    print("\nPlease tell me your name:")
+    print("(Enter 'q' anytime to quit)")
+    artist_name = input("Name:")
+    if artist_name == 'q':
+        break
+    artist_title = input("Title:")
+    if artist_title == 'q':
+        break
+    artist_album = make_album(artist_name , artist_title)
+    print(artist_album)
+
+def show_magicians(name):
+    """Display the name of magicians"""
+    for names in name:
+        magician = names.title()
+        print(magician)
+magicians = ['charlie' , 'harry' , 'eric']
+show_magicians(magicians)
+
+def show_magicians(names , great_names):
+    """Name of magicians"""
+    while names:
+        current = names.pop()
+        print(current.title())
+        great_names.append(current)
+def make_great(great_names):
+    """Add great"""
+    for great in great_names:
+        print(great.title() + ' the Great')
+names = ['charlie' , 'harry' , 'eric']
+great_names = []
+show_magicians(names , great_names)
+make_great(great_names)
+
