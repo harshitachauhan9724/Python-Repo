@@ -95,3 +95,38 @@ great_names = []
 show_magicians(names , great_names)
 make_great(great_names)
 
+def sandwich(*toppings):
+    """Making a sandwich"""
+    print("\nMaking a sandwich with items:")
+    for items in toppings:
+        print("- " + items)
+sandwich('cheese')
+sandwich('capsicum' , 'cheese')
+sandwich('tomato' , 'capsicum' , 'cheese')
+
+def profile(first, last, **info):
+    """My info"""
+    profile = {}
+    profile['first name'] = first
+    profile['last name'] = last
+    for key, value in info.items():
+        profile[key] = value
+    return profile
+user = profile('harshi', 'rajput',
+               location = 'india',
+               hobbies = 'singing')
+print(user)
+
+def car(name, model, **info):
+    """Car info"""
+    cars = {}
+    cars['names'] = name
+    cars['models'] = model
+    for key, value in info.items():
+        cars[key] = value
+    return cars
+call = car('Tata', 'Nexon',
+           color = 'red',
+           price = '14 lac')
+print(call)
+

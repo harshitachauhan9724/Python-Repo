@@ -104,3 +104,38 @@ completed_models = []
 print_model(unprinted_designs , completed_models)
 show_completed_models(completed_models)
 
+def make_pizza(*toppings):
+    """Print the list of toppings."""
+    print(toppings)
+make_pizza('pepperoni')
+make_pizza('mushrooms' , 'extra cheese' , 'capsicum')
+
+def make_pizza(*toppings):
+    """Summarize the pizza we're about to make"""
+    print("\nMaking a pizza with the following toppings:")
+    for topping in toppings:
+        print("- " + topping)
+make_pizza('pepperoni')
+make_pizza('mushrooms' , 'extra cheese' , 'capsicum')
+
+def make_pizza(size , *toppings):
+    """Summarize the pizza we're about to make"""
+    print("\nMaking a " + str(size) + "-inch pizza with the following toppings:")
+    for topping in toppings:
+        print("- " + topping)
+make_pizza(12 , 'pepperoni')
+make_pizza(15, 'mushrooms' , 'extra cheese' , 'capsicum')
+
+def build_profile(first, last, **user_info):
+    """Build a dictionary and store information about a user"""
+    profile = {}
+    profile['first_name'] = first
+    profile['last_name'] = last
+    for key, value in user_info.items():
+        profile[key] = value
+    return profile
+user_profile = build_profile('albert', 'einstein',
+                             location = 'princeton',
+                             field = 'physics')
+print(user_profile)
+
